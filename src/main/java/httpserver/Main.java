@@ -13,8 +13,6 @@ javac src/main/java/minesweeper/minesweeper.java
 
 vans_@LAPTOP-AS886SBL MINGW64 ~/VISA NUS-ISS VTTP/testing/miniproj/src/main/java (main)
 $ javac minesweeper/minesweeper.java
-
-
 ----------------------------------- pom.xml ---------------------------------------------
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -31,6 +29,18 @@ $ javac minesweeper/minesweeper.java
 
  mvn compile exec:java -Dexec.mainClass="httpserver.Main" -Dexec.args="'args 1' 'args 2'"
  mvn compile exec:java -Dexec.mainClass="httpserver.Main" -Dexec.args="'--docRoot' './test/:./static/:./rando/' '--port' '3333'"
+ 
+ ------------------------------------BUILD JAR------------------------------------------
+ vans_@LAPTOP-AS886SBL MINGW64 ~/VISA NUS-ISS VTTP/testing/sdfassessment (main)
+$ mvn package
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ sdfassessment ---
+[INFO] Building jar: C:\Users\vans_\VISA NUS-ISS VTTP\testing\sdfassessment\target\sdfassessment-1.0-SNAPSHOT.jar
+-------------------------------------CHECK FILES INSIDE JAR--------------------------------------------
+vans_@LAPTOP-AS886SBL MINGW64 ~/VISA NUS-ISS VTTP/testing/sdfassessment (main)
+$ jar tvf target/sdfassessment-1.0-SNAPSHOT.jar
+-------------------------------------RUN JAR--------------------------------------------
+vans_@LAPTOP-AS886SBL MINGW64 ~/VISA NUS-ISS VTTP/testing/sdfassessment (main) [JAR FILE RENAMED, WILL STILL WORK]
+$ java -jar target/sdfassessment.jar --port 3456 --docRoot ./static/:./rando/
  */
 
 import java.net.ServerSocket;
