@@ -1,0 +1,18 @@
+create example_manifest.txt file beside class files
+Type in:  ~~~~~~~~~~~~~~~~~~~~~
+Main-Class: [packagename].[mainclassname]
+\n
+          ~~~~~~~~~~~~~~~~~~~~~
+          
+vans_@LAPTOP-AS886SBL MINGW64 ~/VISA NUS-ISS VTTP/testing/miniproj/src/main/java (main)
+$ jar cfm eg.jar minesweeper/example_manifest.txt minesweeper/*.class
+
+vans_@LAPTOP-AS886SBL MINGW64 ~/VISA NUS-ISS VTTP/testing/miniproj/src/main/java (main)
+$ jar xvf eg.jar
+  created: META-INF/
+ inflated: META-INF/MANIFEST.MF
+ inflated: minesweeper/cell.class
+ inflated: minesweeper/minesweeper.class
+
+vans_@LAPTOP-AS886SBL MINGW64 ~/VISA NUS-ISS VTTP/testing/miniproj/src/main/java (main)
+$ java -jar eg.jar
